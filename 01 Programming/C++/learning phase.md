@@ -1,0 +1,18 @@
+###### D1: 23 june focus
+- CPP day 1 | cross out the following stuff; refer [[23 june#^8b23ed|here]] for more details; also- resources: [this website](www.https://learncpp.com/) and [this playlist](https://youtube.com/playlist?list=PLxCzCOWd7aiF6yRNI5OHQsnUJQfl7Geqj&si=a7t1Me9Pftb_jxMI)
+    - cin
+    -  cout
+    -  int
+    -  float
+    -  double
+    -  char
+    -  bool
+    -  string
+    -  arithmetic operators
+    -  comparison operators
+    -  logical operators
+    -  if
+    -  else
+    -  else-if
+    -  switch
+    -  4 small programs completed 
