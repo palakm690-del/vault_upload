@@ -1,0 +1,207 @@
+Folder PATH listing for volume Acer
+Volume serial number is 00000012 A44C:6420
+C:.
+|   .gitignore
+|   structure.txt
+|   
++---.obsidian
+|   |   app.json
+|   |   appearance.json
+|   |   community-plugins.json
+|   |   core-plugins.json
+|   |   daily-notes.json
+|   |   graph.json
+|   |   templates.json
+|   |   types.json
+|   |   workspace.json
+|   |   
+|   \---plugins
+|       +---buttons
+|       |       main.js
+|       |       manifest.json
+|       |       styles.css
+|       |       
+|       +---calendar
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       
+|       +---dataview
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       styles.css
+|       |       
+|       +---obsidian-excalidraw-plugin
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       styles.css
+|       |       
+|       +---obsidian-git
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       obsidian_askpass.sh
+|       |       styles.css
+|       |       
+|       +---obsidian-meta-bind-plugin
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       styles.css
+|       |       
+|       +---obsidian-tasks-plugin
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       styles.css
+|       |       
+|       +---pdf-plus
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       styles.css
+|       |       
+|       +---periodic-notes
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       styles.css
+|       |       
+|       +---quickadd
+|       |       data.json
+|       |       main.js
+|       |       manifest.json
+|       |       styles.css
+|       |       
+|       \---templater-obsidian
+|               data.json
+|               main.js
+|               manifest.json
+|               styles.css
+|               
++---.trash
++---00 System
+|   |   README - Setup Guide.md
+|   |   README.md
+|   |   
+|   +---01 Dashboards
+|   |   |   Buttons.md
+|   |   |   Dashboard.md
+|   |   |   Task Inbox.md
+|   |   |   TaskView.md
+|   |   |   Weekly Review.md
+|   |   |   
+|   |   +---92 Weekly Reviews
+|   |   \---93 Monthly Reviews
+|   +---02 Templates
+|   |       Daily Notes Template v2.md
+|   |       Daily Notes Template.md
+|   |       Daily_Notes_Template.md
+|   |       Dataset_Page.md
+|   |       Meeting.md
+|   |       Monthly Review Template.md
+|   |       Monthly_Review_Template.md
+|   |       Project.md
+|   |       Weekly Review Template.md
+|   |       Weekly_Review_Template.md
+|   |       
+|   +---03 Scripts
+|   |       Config.js.txt
+|   |       FolderScanner.js.txt
+|   |       VaultUtils.js.txt
+|   |       
+|   +---04 Config
+|   |       Config.md
+|   |       
+|   \---05 Assets
++---01 Programming
+|   +---C
+|   |       blank.md
+|   |       
+|   +---C++
+|   |   |   learning phase.md
+|   |   |   
+|   |   \---learncpp
+|   |           0.1 — Introduction to these tutorials – Learn C++.pdf
+|   |           
+|   +---DSA
+|   |       blank.md
+|   |       
+|   \---Leetcode
++---02 College
+|   +---Semester 3
+|   \---Semester 4
++---03 Projects
++---04 Internship
+|   |   log.md
+|   |   Week3 Assignment 1.md
+|   |   
+|   \---ML and GenAI with Python
+|       +---assignments
+|       |   +---week3
+|       |   |   \---a1
+|       |   |           agriculture_yield_dataset.csv
+|       |   |           hospital.csv
+|       |   |           Week 3 Assignment 1.pdf
+|       |   |           
+|       |   \---week4
+|       |           Exercise.docx
+|       |           Exercise.pdf
+|       |           Loan prediction.csv
+|       |           
+|       +---Downloads
+|       |       Github Instructions.pdf
+|       |       Lecture 1.pptx
+|       |       Lecture 11.pptx
+|       |       Lecture 1_merged.pdf
+|       |       Lecture 2.pptx
+|       |       sample LR table.docx
+|       |       
+|       +---lect ppt
+|       \---Project
+|           |   ML_Project and RP guidelines.pdf
+|           |   ML_Proj_RP_Instructions.pdf
+|           |   
+|           \---student placement prediction
+|               \---dataset1
+|                       test.csv
+|                       train.csv
+|                       
++---05 Research
+|   |   blank.md
+|   |   possible research contacts.md
+|   |   
+|   +---Ideas
+|   \---Papers
++---06 creative
+|   +---drawing
+|   |       how-to-draw-drawing-and-sketching-objects-and-environments-from-your-imagination-first-edition-1933492732-9781933492735_compress.pdf
+|   |       
+|   \---Film-making
++---07 Personal
+|   +---01 Gym
+|   +---02 Health
+|   +---Finance
+|   +---Journal
+|   |   \---Daily
+|   |           20-06-2026.md
+|   |           23-06-2026.md
+|   |           
+|   \---Reading
+\---99 Archives
+    |   experimenting.md
+    |   Tasks.md
+    |   Welcome.md
+    |   
+    +---91 Excalidraw
+    |       Pointers diagram.md
+    |       
+    +---from gpt
+    |       23 june.md
+    |       
+    +---insta
+    |       Managing insta saves.md
+    |       
+    \---pdf
