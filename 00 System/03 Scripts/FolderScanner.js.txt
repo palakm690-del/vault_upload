@@ -1,0 +1,81 @@
+const CONFIG = require("./Config");
+const Utils = require("./VaultUtils");
+
+/**
+ * Returns every valid folder that can be used for task tagging.
+ *
+ * A valid folder:
+ *  - is inside one of CONFIG.ROOTS
+ *  - is not ignored
+ *  - is within MAX_TAG_DEPTH
+ */
+
+function getValidFolders(app) {
+
+    const folders = [];
+
+    for (const rootName of CONFIG.ROOTS) {
+
+        const root = app.vault.getFolderByPath(rootName);
+
+        if (!root) continue;
+
+        scan(root, [], folders);
+
+    }
+
+    return folders;
+}
+
+function scan(folder, path, output) {
+
+    const cleanName = Utils.stripPrefix(folder.name);
+
+    const currentPath = [...path, cleanName];
+
+    output.push({
+
+        name: cleanName,
+
+        path: currentPath,
+
+        tag: Utils.buildTag(currentPath),
+
+        folder
+
+    });
+
+    if (currentPath.length >= CONFIG.MAX_TAG_DEPTH)
+        return;
+
+    for (const child of folder.children) {
+
+        if (!child.children)
+            continue;
+
+        if (Utils.isIgnored(child.name))
+            continue;
+
+        scan(child, currentPath, output);
+
+    }
+
+}
+
+/**
+ * Converts folder object to display string.
+ */
+
+function display(folder) {
+
+    return folder.path.join(" → ");
+
+}
+
+module.exports = {
+
+    getValidFolders,
+
+    display
+
+};

@@ -1,0 +1,139 @@
+const CONFIG = require("./Config");
+
+/**
+ * Returns today's date in YYYY-MM-DD
+ */
+function today() {
+    return window.moment().format(CONFIG.INTERNAL_DATE);
+}
+
+/**
+ * Returns today's date in display format
+ */
+function displayToday() {
+    return window.moment().format(CONFIG.DISPLAY_DATE);
+}
+
+/**
+ * Remove numeric prefixes from folders.
+ *
+ * "01 College" -> "College"
+ * "06 Personal" -> "Personal"
+ */
+function stripPrefix(name) {
+    return name.replace(/^\d+\s*/, "");
+}
+
+/**
+ * Converts folder name to tag.
+ *
+ * "Semester 3" -> "semester3"
+ * "Video Editing" -> "videoediting"
+ */
+function folderToTag(name) {
+
+    let result = stripPrefix(name);
+
+    if (CONFIG.REMOVE_SPACES)
+        result = result.replace(/\s+/g, "");
+
+    if (CONFIG.LOWERCASE_TAGS)
+        result = result.toLowerCase();
+
+    return result;
+}
+
+/**
+ * Builds a hierarchical tag.
+ *
+ * ["01 College","Semester 3","DSA"]
+ *
+ * ->
+ *
+ * college/semester3/dsa
+ */
+function buildTag(pathArray) {
+
+    return pathArray
+        .map(folderToTag)
+        .join(CONFIG.TAG_SEPARATOR);
+
+}
+
+/**
+ * Generates a unique task ID.
+ *
+ * Example
+ *
+ * TASK-20260629-1732849234
+ */
+function generateTaskID() {
+
+    return `${CONFIG.ID_PREFIX}-${Date.now()}`;
+
+}
+
+/**
+ * Returns true if folder should be ignored.
+ */
+function isIgnored(folderName) {
+
+    return CONFIG.IGNORE_FOLDERS.includes(folderName);
+
+}
+
+/**
+ * Append text to a file.
+ */
+async function appendToFile(app, path, text) {
+
+    const file = app.vault.getFileByPath(path);
+
+    if (!file)
+        throw new Error(`Cannot find ${path}`);
+
+    await app.vault.process(file, content => {
+
+        if (content.trim() === "")
+            return text;
+
+        return content + "\n" + text;
+
+    });
+
+}
+
+/**
+ * Returns all top-level folders.
+ */
+function getRootFolders(app) {
+
+    return app.vault
+        .getRoot()
+        .children
+        .filter(f => f.children)
+        .filter(f => !isIgnored(f.name));
+
+}
+
+module.exports = {
+
+    today,
+
+    displayToday,
+
+    stripPrefix,
+
+    folderToTag,
+
+    buildTag,
+
+    generateTaskID,
+
+    appendToFile,
+
+    getRootFolders,
+
+    isIgnored
+
+};

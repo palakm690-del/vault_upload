@@ -1,0 +1,202 @@
+/**
+ * ============================================================
+ * TaskFlow Configuration
+ * ------------------------------------------------------------
+ * Central configuration file for the entire task system.
+ *
+ * Change values here instead of editing the scripts.
+ * ============================================================
+ */
+
+const CONFIG = {
+
+    /*
+    ============================================================
+    TASK FILE
+    ============================================================
+    */
+
+    TASK_FILE: "99 Archives/Tasks.md",
+
+    /*
+    ============================================================
+    ROOT FOLDERS
+    Only these folders are considered valid work areas.
+    ============================================================
+    */
+
+    ROOTS: [
+
+        "01 College",
+
+        "02 Programming",
+
+        "03 Internship",
+
+        "04 Research",
+
+        "05 Creative",
+
+        "06 Personal"
+
+    ],
+
+    /*
+    ============================================================
+    FOLDERS TO IGNORE
+    ============================================================
+    */
+
+    IGNORE_FOLDERS: [
+
+        "00 System",
+
+        "99 Archives",
+
+        ".obsidian",
+
+        ".trash",
+
+        "Templates",
+
+        "Assets"
+
+    ],
+
+    /*
+    ============================================================
+    MAXIMUM TAG DEPTH
+
+    Example
+
+    College
+        Semester 3
+            DSA
+                Assignments
+                    PDFs
+
+    depth = 3
+
+    tag becomes
+
+    #college/semester3/dsa
+
+    ============================================================
+    */
+
+    MAX_TAG_DEPTH: 3,
+
+    /*
+    ============================================================
+    PRIORITIES
+    ============================================================
+    */
+
+    PRIORITIES: [
+
+        {
+            name: "High",
+            symbol: "🔺"
+        },
+
+        {
+            name: "Normal",
+            symbol: ""
+        },
+
+        {
+            name: "Low",
+            symbol: "🔻"
+        }
+
+    ],
+
+    /*
+    ============================================================
+    DATE FORMAT
+
+    User-facing format only.
+
+    Tasks plugin internally uses YYYY-MM-DD.
+
+    ============================================================
+    */
+
+    DISPLAY_DATE: "DD-MM-YYYY",
+
+    INTERNAL_DATE: "YYYY-MM-DD",
+
+    /*
+    ============================================================
+    TASK TYPES
+
+    Future use.
+
+    ============================================================
+    */
+
+    TYPES: [
+
+        "Assignment",
+
+        "Revision",
+
+        "Reading",
+
+        "Coding",
+
+        "Research",
+
+        "Meeting",
+
+        "Documentation",
+
+        "Bug",
+
+        "Feature",
+
+        "Personal"
+
+    ],
+
+    /*
+    ============================================================
+    TAG SETTINGS
+    ============================================================
+    */
+
+    TAG_SEPARATOR: "/",
+
+    LOWERCASE_TAGS: true,
+
+    REMOVE_SPACES: true,
+
+    /*
+    ============================================================
+    UNIQUE ID
+    ============================================================
+    */
+
+    GENERATE_IDS: true,
+
+    ID_PREFIX: "TASK",
+
+    /*
+    ============================================================
+    CREATED DATE
+    ============================================================
+    */
+
+    AUTO_CREATED_DATE: true,
+
+    /*
+    ============================================================
+    DUE DATE
+    ============================================================
+    */
+
+    ALLOW_EMPTY_DUE: true
+
+};
+
+module.exports = CONFIG;
